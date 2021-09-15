@@ -4,13 +4,9 @@ import { Component, EventEmitter, Input } from '@angular/core';
   selector: 'app-child-wrapper',
   template: `
     <!-- will be lazy loaded and uses standard Angular template bindings -->
-    <some-element
-      *axLazyElement="link"
-    >
-    </some-element>
-  `,
-  styles: [
-  ]
+    <micro-app *axLazyElement="link">
+    </micro-app>
+  `
 })
 export class ChildWrapperComponent  {
   link: string = 'http://localhost:3000/main.js'
