@@ -3,7 +3,11 @@ import { Component, EventEmitter, Input } from '@angular/core';
 @Component({
   selector: 'app-child-wrapper',
   template: `
-    <micro-app *axLazyElement="link"></micro-app>
+    <!-- will be lazy loaded and uses standard Angular template bindings -->
+    <some-element
+      *axLazyElement="link"
+    >
+    </some-element>
   `,
   styles: [
   ]
